@@ -33,7 +33,7 @@ class Evaluation(Board):
                 if super(Evaluation , self).board[x][y] != 0:
                     pieces = super(Evaluation , self).board[x][y]
                     if(pieces[2:] == 'pawn'):
-                        value = 10
+                        value = 30
                     elif(pieces[2:] == 'knight'):
                         value = 50                    
                     elif(pieces[2:] == 'bishop'):

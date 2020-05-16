@@ -3,10 +3,10 @@ from threading import Thread ,active_count
      
 def main():   
     print "##############   help   ##############"
-    print "# 1. pres R to reset game            #"
-    print "# 2. pres Q to quit game             #"
-    print "# 3. pres Z to undo last move        #"
-    print "# 4. pres M to mute/unmute           #"
+    print "# 1. press R to reset game           #"
+    print "# 2. press Q to quit game            #"
+    print "# 3. press Z to undo last move       #"
+    print "# 4. press M to mute/unmute          #"
     print "######################################"
     g = GUI()  
     
