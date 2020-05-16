@@ -3,6 +3,7 @@ from Graphic.board import Board
 
 class Move(Thread , Board):
     player_team = 'b'
+    p = 'b'
     def __init__(self): 
         Thread.__init__(self)
         self.X_position ,self.Y_position = None , None
@@ -24,7 +25,7 @@ class Move(Thread , Board):
         temp = []
         possible_move = []  # all moves which valid for pieces to do
         revers_move = -1       #black : -1
-        if self.is_white:   
+        if self.name[0] == Move.p :  
             revers_move *= -1   #white : +1
 
         if self.type == all_model[1] or self.type == all_model[4]:  #rook or queen moves : 

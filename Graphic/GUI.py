@@ -54,6 +54,7 @@ class GUI():
 
         if (team2 == 'black'):
             Move.player_team = 'w'
+            Move.p = 'w'
             threading.Thread(target=p1.move).start()
         
             p1.next_round()

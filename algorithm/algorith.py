@@ -27,15 +27,15 @@ class algorithm(Board):
                     t = tree(value , [x ,y])
                     for possible_move in m.possible_moves():
                         t.append(possible_move)
-                        if super(algorithm , self).board[possible_move[1]][possible_move[0]] ==  'b_king':
-                            algorithm.check = True 
-                            algorithm.king_X_pos ,algorithm.king_Y_pos  = possible_move[0] ,possible_move[1]
+                        #if super(algorithm , self).board[possible_move[1]][possible_move[0]] ==  'b_king':
+                        #    algorithm.check = True 
+                        #    algorithm.king_X_pos ,algorithm.king_Y_pos  = possible_move[0] ,possible_move[1]
                     if (len(t.get_children()) > 0): 
                         possible_tree.append(t)
 
         return possible_tree 
     def AI(self): 
-        depth = 5
+        depth = 2
         if Move.player_team == 'b': #if AI is black 
             print self.minimax( depth , False)   
         else:                       #if AI is white
