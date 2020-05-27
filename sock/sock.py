@@ -16,22 +16,22 @@ class sock():
         try:
             self.s.connect((self.host, self.port)) 
         except Exception as e:
-            print 'something wrong' , e 
+            print ('something wrong' , e )
 
         try:
             data = json.dumps({"a": Board.board})
             self.s.sendall(data.encode()) 
         except Exception as e:
-            print 'something wrong json ' , e 
-        print 'send' 
+            print ('something wrong json ' , e )
+        print ('send' )
 
     def receive(self):
         temp = Board.board
         try:
             self.s.bind((self.host, self.port))
         except Exception as e:
-            print 'something wrong' , e 
-        print 'wating for connection'
+            print ('something wrong' , e )
+        print ('wating for connection')
         self.s.listen(1)
         conn , addr = self.s.accept()
         data = conn.recv(1024)
@@ -42,7 +42,7 @@ class sock():
                 temp[7-x][y] = d[x][y]
         
         Board.board = temp 
-        print 'receive'
+        print ('receive')
 
     def close(self):
         self.s.close() 

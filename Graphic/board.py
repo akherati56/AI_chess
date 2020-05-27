@@ -1,4 +1,4 @@
-from pieces import *
+from Graphic.pieces import *
 
 class Board(object):
     board = []    
@@ -40,9 +40,9 @@ class Board(object):
         DARK = Pieces()
         DARK.set_background(self.template_path[self.selected_tempelate][1]) 
         i = 0
-        for y in range(0, height, height / 8):
+        for y in range(0, height, int(height / 8)):
             i+=1
-            for x in range(0, width, width / 8):
+            for x in range(0, width, int(width / 8)):
                 i+=1
                 if(i%2 == 0):
                     BRIGHT.draw_model([x , y])

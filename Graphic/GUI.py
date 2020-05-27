@@ -1,6 +1,6 @@
-from pieces import *
-from board import Board
-from anime import Anime
+from Graphic.pieces import *
+from Graphic.board import Board
+from Graphic.anime import Anime
 from sound.sound import Sound
 from algorithm.move import Move , Thread
 import threading

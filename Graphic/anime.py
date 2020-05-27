@@ -1,4 +1,4 @@
-from pieces import *
+from Graphic.pieces import *
 from sound.sound import Sound 
 from threading import Thread
 

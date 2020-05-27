@@ -37,9 +37,9 @@ class algorithm(Board):
     def AI(self): 
         depth = 2
         if Move.player_team == 'b': #if AI is black 
-            print self.minimax( depth , False)   
+            print (self.minimax( depth , False))
         else:                       #if AI is white
-            print self.minimax( depth , True)     
+            print (self.minimax( depth , True))
         
         self.mov(self.bestmove_val , self.bestmove_pos ,self.bestmove_des) 
 
